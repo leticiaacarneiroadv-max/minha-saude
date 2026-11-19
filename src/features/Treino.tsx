@@ -17,7 +17,7 @@ function RestTimer({ seconds, runKey }: { seconds: number; runKey: number }) {
   }, [left])
   if (left <= 0) return null
   return (
-    <div className="fixed inset-x-4 bottom-28 z-30 mx-auto flex max-w-xl items-center justify-between rounded-3xl bg-gradient-to-r from-brand-700 to-mint-500 p-4 text-white shadow-soft">
+    <div className="fixed inset-x-4 bottom-28 z-30 mx-auto md:bottom-6 flex max-w-xl items-center justify-between rounded-3xl bg-gradient-to-r from-brand-700 to-mint-500 p-4 text-white shadow-soft">
       <div className="flex items-center gap-2 font-semibold"><Timer /> Descanso</div>
       <div className="text-3xl font-extrabold tabular-nums">{Math.floor(left / 60)}:{String(left % 60).padStart(2, '0')}</div>
       <button className="rounded-xl bg-white/20 px-3 py-2 font-semibold" onClick={() => setLeft(0)}>Pular</button>
